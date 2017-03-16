@@ -1,11 +1,11 @@
 import angular from 'angular';
 import * as uiRouter from 'angular-ui-router';
 import {DefaultState, DefaultCtrl} from './default';
-import {AwwState, AwwCtrl} from './aww';
+import {AwwState, AwwCtrl, AwwServiceName, AwwService} from './aww';
 
 import '../style/app.css';
 
-
+console.log('AwwService', AwwService);
 
 let app = () => {
   return {
@@ -24,10 +24,10 @@ angular.module(MODULE_NAME, ['ui.router'])
   })
   .run(($state) => {
   	$state.go('default');
-  	$state.go('aww');
   })
   .directive('app', app)
   .controller(DefaultState.controller, DefaultCtrl)
-  .controller(AwwState.controller, AwwCtrl);
+  .controller(AwwState.controller, AwwCtrl)
+  .service(AwwServiceName, AwwService);
 
 export default MODULE_NAME;
