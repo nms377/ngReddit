@@ -1,6 +1,6 @@
 import angular from 'angular';
 import * as uiRouter from 'angular-ui-router';
-import {DefaultState, DefaultCtrl } from './default';
+import {DefaultState, DefaultCtrl} from './default';
 
 import '../style/app.css';
 
@@ -15,7 +15,6 @@ let app = () => {
 const MODULE_NAME = 'app';
 
 angular.module(MODULE_NAME, ['ui.router'])
-  .directive('app', app)
   .config(($stateProvider) => {
   	$stateProvider
   		.state(DefaultState.name, DefaultState)
@@ -23,6 +22,8 @@ angular.module(MODULE_NAME, ['ui.router'])
   })
   .run(($state) => {
   	$state.go('default');
-  });
+  })
+  .directive('app', app)
+  .controller(DefaultState.controller, DefaultCtrl);
 
 export default MODULE_NAME;
