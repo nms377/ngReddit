@@ -27,7 +27,7 @@ angular.module(MODULE_NAME, ['ui.router'])
   	$state.go('default');
   })
   .directive('app', app)
-  .directive(Thumb)
+  .directive(ThumbName, Thumb)
   .controller(DefaultState.controller, DefaultCtrl)
   .controller(AwwState.controller, AwwCtrl)
   .service('AwwService', AwwService);

@@ -25,12 +25,12 @@ footer {
   list-style-type: none;
 }
 
-.post-thumb-img {
+.post-thumb {
   max-width: 400px;
   max-height: 400px;
 }
 
-.post-thumb-large, .post-thumb {
+.post-thumb-large {
   max-width: 800px;
   max-height: 800px;
 }
