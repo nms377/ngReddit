@@ -3,6 +3,7 @@ import * as uiRouter from 'angular-ui-router';
 import {DefaultState, DefaultCtrl} from './default';
 import {AwwState, AwwCtrl, AwwServiceName, AwwService} from './aww';
 import {ThumbName, Thumb} from './thumb';
+import {ProgrammerhumorState, ProgrammerhumorCtrl} from './programmerhumor';
 
 import '../style/app.css';
 
@@ -20,7 +21,8 @@ angular.module(MODULE_NAME, ['ui.router'])
   .config(($stateProvider) => {
   	$stateProvider
   		.state(DefaultState.name, DefaultState)
-  		.state(AwwState.name, AwwState)
+      .state(AwwState.name, AwwState)
+  		.state(ProgrammerhumorState.name, ProgrammerhumorState)
   		;
   })
   .run(($state) => {
@@ -30,6 +32,7 @@ angular.module(MODULE_NAME, ['ui.router'])
   .directive(ThumbName, Thumb)
   .controller(DefaultState.controller, DefaultCtrl)
   .controller(AwwState.controller, AwwCtrl)
+  .controller(ProgrammerhumorState.controller, ProgrammerhumorCtrl)
   .service('AwwService', AwwService);
 
 export default MODULE_NAME;
