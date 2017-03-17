@@ -30,4 +30,8 @@ footer {
   max-height: 400px;
 }
 
+.post-thumb-large, .post-thumb {
+  max-width: 800px;
+  max-height: 800px;
+}
 

@@ -2,6 +2,7 @@ import angular from 'angular';
 import * as uiRouter from 'angular-ui-router';
 import {DefaultState, DefaultCtrl} from './default';
 import {AwwState, AwwCtrl, AwwServiceName, AwwService} from './aww';
+import {ThumbName, Thumb} from './thumb';
 
 import '../style/app.css';
 
@@ -26,6 +27,7 @@ angular.module(MODULE_NAME, ['ui.router'])
   	$state.go('default');
   })
   .directive('app', app)
+  .directive(Thumb)
   .controller(DefaultState.controller, DefaultCtrl)
   .controller(AwwState.controller, AwwCtrl)
   .service('AwwService', AwwService);
