@@ -28,6 +28,6 @@ angular.module(MODULE_NAME, ['ui.router'])
   .directive('app', app)
   .controller(DefaultState.controller, DefaultCtrl)
   .controller(AwwState.controller, AwwCtrl)
-  .service(AwwServiceName, AwwService);
+  .service('AwwService', AwwService);
 
 export default MODULE_NAME;

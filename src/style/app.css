@@ -20,3 +20,14 @@ footer {
   text-align: center;
   font-size: 0.8em;
 }
+
+.post-thumb-list {
+  list-style-type: none;
+}
+
+.post-thumb-img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+
